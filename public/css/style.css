@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+    display: inline-block;
+}
+
+nav {
+    float: right;
+}
+
+nav a, nav button {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+.post {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.btn {
+    background: #007bff;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.btn.danger {
+    background: #dc3545;
+}
+
+.alert.success {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
