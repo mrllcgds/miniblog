@@ -10,7 +10,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 
 </head>
-<body class="min-h-screen flex flex-col bg-cover bg-center" style="background-image: url('{{ asset('images/miniblog_bg_initial.jpg') }}'); text-shadow: 1px 1px 3px black;">
+<body class="min-h-screen flex flex-col bg-cover bg-center" style="text-shadow: 1px 1px 3px black;">
 
     {{-- Header --}}
     <header class="flex justify-between items-center px-24 py-9 bg-transparent">

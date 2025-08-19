@@ -8,7 +8,7 @@
     @vite('resources/css/app.css')
 </head>
 <body class="m-0 p-0 min-h-screen bg-cover bg-center font-sans flex flex-col" 
-      style="background-image: url('{{ asset('images/miniblog_bg_initial.jpg') }}'); text-shadow: 1px 1px 3px black;">
+      style="background-image: url('{{ asset('images/dashboard_bg.jpg') }}'); text-shadow: 1px 1px 3px black;">
 
     {{-- Header --}}
     @include('template.header')
