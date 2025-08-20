@@ -31,6 +31,17 @@
     <div class="max-w-sm w-full text-center mt-20">
         <h2 class="mb-6 text-2xl font-bold">Create Your Account</h2>
 
+        {{-- Validation errors --}}
+        @if ($errors->any())
+            <div class="bg-red-500 text-white p-3 rounded mb-4">
+                <ul class="list-disc pl-5">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form class="space-y-4" method="POST" action="{{ route('register') }}">
             @csrf
 
@@ -75,7 +86,7 @@
             </button>
         </form>
 
-        <p class="mt-4 text-sm">
+        <p class="mt-5 text-sm">
             Already have an account? <a href="{{ route('login') }}" class="underline">Login here</a>.
         </p>
     </div>

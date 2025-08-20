@@ -14,9 +14,7 @@ use Illuminate\View\View;
 
 class RegisteredUserController extends Controller
 {
-    /**
-     * Display the registration view.
-     */
+    /* Display the registration view. */
     public function create(): View
     {
         return view('auth.register');
@@ -35,7 +33,8 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $user = User::create([
+        try {
+            $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
@@ -45,6 +44,11 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('dashboard', absolute: false));
+        return redirect()->route('dashboard')->with('success', 'Registration successful!');
+    }
+        catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Registration failed. Please try again.');
+        }
+        
     }
 }

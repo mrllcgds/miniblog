@@ -19,6 +19,7 @@
     @include('template.header')
 
     {{-- Dashboard content --}}
+
     <main class="flex-grow flex flex-col justify-center items-center text-center px-6">
         <h1 class="font-['Fredoka',sans-serif] text-[80px] text-[#F5DEB3] drop-shadow-lg">
             Welcome back!
