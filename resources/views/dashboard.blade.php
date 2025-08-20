@@ -8,18 +8,23 @@
     @vite('resources/css/app.css')
 </head>
 <body class="m-0 p-0 min-h-screen bg-cover bg-center font-sans flex flex-col" 
-      style="background-image: url('{{ asset('images/dashboard_bg.jpg') }}'); text-shadow: 1px 1px 3px black;">
+    style="
+        background-image: url('{{ asset('images/dashboard_bg.jpg') }}'); 
+        background-size: cover;
+        background-position: center;
+        text-shadow: 1px 1px 3px black;
+    ">
 
     {{-- Header --}}
     @include('template.header')
 
     {{-- Dashboard content --}}
     <main class="flex-grow flex flex-col justify-center items-center text-center px-6">
-        <h1 class="font-['Fredoka',sans-serif] text-[80px] text-[#f5deb3] mb-2 drop-shadow-lg">
+        <h1 class="font-['Fredoka',sans-serif] text-[80px] text-[#F5DEB3] drop-shadow-lg">
             Welcome back!
         </h1>
 
-        <p class="font-sans font-bold text-[#fdf5e6] text-[30px] mb-4 drop-shadow-md">
+        <p class="font-sans font-bold text-[#F5DEB3] text-[30px] mb-4 drop-shadow-md">
             {{ __("You're logged in!") }}
         </p>
 

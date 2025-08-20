@@ -39,6 +39,15 @@
 
         <form class="space-y-4" method="POST" action="{{ route('login') }}">
             @csrf
+
+            <!-- login errors -->
+            @if ($errors->any())
+            <div class="bg-red-100 text-red-700 px-4 py-2 rounded-lg">
+                {{ $errors->first() }}
+            </div>
+            @endif
+
+            
             <input type="email" name="email" placeholder="Email" class="w-full p-3 rounded-lg text-black" required>
             <input type="password" name="password" placeholder="Password" class="w-full p-3 rounded-lg text-black" required>
 
@@ -47,7 +56,7 @@
             </button>
         </form>
 
-        <p class="mt-4 text-sm">
+        <p class="mt-8 text-sm">
             Don’t have an account? <a href="{{ route('register') }}" class="underline">Register here</a>.
         </p>
     </div>
