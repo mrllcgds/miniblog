@@ -8,7 +8,7 @@
         @csrf
 
         <div>
-            <label for="title" class="block mb-2 font-semibold text-[#4F709C]">Title</label>
+            <label for="title" class="block mb-2 font-semibold text-gray-700" style="text-shadow:none";>Title</label>
             <input 
                 id="title"
                 name="title" 
@@ -23,7 +23,7 @@
         </div>
 
         <div>
-            <label for="content" class="block mb-2 font-semibold text-[#4F709C]">Content</label>
+            <label for="content" class="block mb-2 font-semibold text-gray-700 text-shadow-none" style="text-shadow:none";>Content</label>
             <textarea 
                 id="content"
                 name="content" 
@@ -38,7 +38,7 @@
 
         <button 
             type="submit" 
-            class="bg-[#f5deb3] text-[#1a1a1a] px-8 py-3 rounded-[15px] font-bold hover:bg-[#e6cdad] transition-colors"
+            class="bg-[#f5deb3] text-[#1a1a1a] px-8 py-1 rounded-[15px] font-bold hover:bg-[#e6cdad] transition-colors"
         >
             Publish
         </button>

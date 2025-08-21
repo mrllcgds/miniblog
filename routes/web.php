@@ -30,7 +30,7 @@ Route::middleware(['auth'])->group(function () {
     // Profile
     Route::get('/profile', function () {
         return view('profile');
-    })->middleware('verified')->name('profile');
+    })->name('profile');
 });
 
 
