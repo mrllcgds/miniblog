@@ -18,9 +18,9 @@
         <nav class="flex items-center gap-8 font-bold text-[#f5deb3]">
             @auth
                 <a href="{{ route('posts.index') }}" class="hover:underline py-2">Home</a>
-                <a href="{{ route('dashboard') }}" class="hover:underline py-2">Dashboard</a>
+                <a href="{{ route('profile') }}" class="hover:underline py-2">Profile</a>
                 <a href="{{ route('posts.create') }}" class="hover:underline py-2">Create Post</a>
-                <a href="{{ url('/profile') }}" class="hover:underline py-2">Profile</a>
+                <a href="{{ url('/profile-settings') }}" class="hover:underline py-2">Settings</a>
 
                 <form action="{{ route('logout') }}" method="POST" class="inline-flex items-center">
                     @csrf

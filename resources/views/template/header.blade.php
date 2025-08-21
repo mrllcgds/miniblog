@@ -9,7 +9,7 @@
         <!-- nav links to the right -->
         <div class="flex items-center gap-8 mr-24 mt-2 mb-auto font-fredoka font-bold">
             @auth
-                <a href="{{ url('/profile') }}" class="text-[#f5deb3] font-['Fredoka',sans-serif] no-underline">Profile</a>
+                <a href="{{ url('/profile-settings') }}" class="text-[#f5deb3] font-['Fredoka',sans-serif] no-underline">Settings</a>
                 <form action="{{ route('logout') }}" method="POST" class="inline">
                     @csrf
                     <button type="submit" class="bg-[#4F709C] px-6 py-1 rounded-[15px] text-white font-bold no-underline hover:bg-[#3B5A82] transition-colors">

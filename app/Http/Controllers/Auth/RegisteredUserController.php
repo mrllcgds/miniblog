@@ -44,7 +44,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('dashboard')->with('success', 'Registration successful!');
+        return redirect()->route('profile')->with('success', 'Registration successful!');
     }
         catch (\Exception $e) {
             return redirect()->back()->with('error', 'Registration failed. Please try again.');

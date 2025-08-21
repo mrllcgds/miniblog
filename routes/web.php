@@ -21,16 +21,16 @@ Route::middleware(['auth'])->group(function () {
 
 
     // Optional profile routes
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/profile-settings', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile-settings', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile-settings', [ProfileController::class, 'destroy'])->name('profile.destroy');
     
 
 
-    // Dashboard
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->middleware('verified')->name('dashboard');
+    // Profile
+    Route::get('/profile', function () {
+        return view('profile');
+    })->middleware('verified')->name('profile');
 });
 
 
